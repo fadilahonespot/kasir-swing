@@ -6,12 +6,12 @@
 ### Query SQL
 ```
 create table tingkatan(
-	id int primary key auto_increment,
+    id int primary key auto_increment,
     nama varchar(25)
 );
 
 create table users(
-	username varchar(50) primary key,
+    username varchar(50) primary key,
     pass text,
     nama varchar(100),
     alamat text,
@@ -24,7 +24,7 @@ create table users(
 );
 
 create table supplier(
-		kode varchar(25) primary key,
+	kode varchar(25) primary key,
         nama varchar(100),
         alamat text,
         telp varchar(15),
@@ -33,7 +33,7 @@ create table supplier(
 );
 
 create table barang(
-		kode varchar(25) primary key,
+	kode varchar(25) primary key,
         nama varchar(225),
         harga bigint,
         kode_supplier varchar(25),
@@ -43,7 +43,7 @@ create table barang(
 );
 
 create table transaksi(
-	id int primary key auto_increment,
+    id int primary key auto_increment,
     order_number varchar(50),
     kode_barang varchar(25),
     quantity int,
@@ -63,5 +63,5 @@ insert into users(username, pass, nama, email, tingkatan_id) values('admin', 'e1
 ./src/FormLogin.java
 
 ### Login Credential
-username: admin
+username: admin <br />
 password: 123456
