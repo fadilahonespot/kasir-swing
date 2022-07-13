@@ -1,4 +1,3 @@
-
 import java.awt.HeadlessException;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -31,7 +30,7 @@ public class FormTambahBarang extends javax.swing.JFrame {
      */
    private void setComboBoxSupplier() {
             try {
-            com.mysql.jdbc.Statement statement = (com.mysql.jdbc.Statement) Koneksi.getConnection().createStatement();
+            java.sql.Statement statement = (java.sql.Statement) Koneksi.getConnection().createStatement();
             ResultSet res = statement.executeQuery("select * from supplier WHERE deleted_at IS NULL");
             while (res.next()) {
               cSupplier.addItem(res.getString("kode"));

@@ -1,9 +1,9 @@
 
 import Config.Koneksi;
-import com.mysql.jdbc.Statement;
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDateTime;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;

@@ -1,9 +1,9 @@
 
 import Config.Koneksi;
-import com.mysql.jdbc.Statement;
 import java.awt.HeadlessException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDateTime;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -31,7 +31,7 @@ public class FormBarang extends javax.swing.JFrame {
 
     private void setComboBoxSupplier() {
         try {
-            com.mysql.jdbc.Statement statement = (com.mysql.jdbc.Statement) Koneksi.getConnection().createStatement();
+            java.sql.Statement statement = (java.sql.Statement) Koneksi.getConnection().createStatement();
             ResultSet res = statement.executeQuery("select * from supplier WHERE deleted_at is null");
             while (res.next()) {
                 cSupplier.addItem(res.getString("kode"));
